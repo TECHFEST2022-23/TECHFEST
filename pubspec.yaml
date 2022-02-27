@@ -38,6 +38,7 @@ dependencies:
   salomon_bottom_bar: ^3.2.0
   material_design_icons_flutter: ^5.0.6595
   url_launcher: ^6.0.20
+  font_awesome_flutter: ^9.2.0
 
 dev_dependencies:
   flutter_test:

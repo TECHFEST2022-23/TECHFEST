@@ -5,6 +5,11 @@ import 'Mydrawer.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'social_page.dart';
+import 'sign_the_pledge_page.dart';
+import 'merchindies_page.dart';
+import 'event_button_page.dart';
+
 
 class MyHome extends StatefulWidget {
   const MyHome({Key? key}) : super(key: key);
@@ -25,7 +30,7 @@ class _MyHomeState extends State<MyHome> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
+        title: const Text(
           "Tech fest",
           style: TextStyle(
             fontSize: 20,
@@ -95,10 +100,10 @@ class _MyHomeState extends State<MyHome> {
         ],
       ),
       drawer: Mydrawer(),
-      body: Container(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(20),
               child: Text(
                 "tech events",
@@ -127,6 +132,73 @@ class _MyHomeState extends State<MyHome> {
                   aspectRatio: 2.0,
                   enlargeCenterPage: true,
                 )),
+            Container(
+
+              padding: const EdgeInsets.only(top: 15.0,left: 20.0),
+              child: const Text("Check out for all the events",style: TextStyle(
+                color : Colors.blueGrey,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+
+              ),),
+
+            ),
+            const EventButtonPage(),
+            const  Merchandies(),
+            const Divider(
+              height: 5.0,
+              color: Colors.black,
+            ),
+            Container(
+
+              padding: const EdgeInsets.only(top: 15.0,left: 20.0),
+              child: const Text("Check out our social media handles ",style: TextStyle(
+                color : Colors.blueGrey,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+
+              ),),
+
+            ),
+            const SocialPage(),
+            const SizedBox(
+              height: 10.0,
+            ),
+            const Divider(
+              height: 5.0,
+              color: Colors.black,
+            ),
+            const signThePledge(),
+            Container(
+              margin: const EdgeInsets.only(left: 20),
+              child: Row(
+
+                children: const [
+                  Text('A tour to our virtual twenty fifth edition',style: TextStyle(
+                    color: Colors.blueGrey,
+                    decoration: TextDecoration.underline,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  SizedBox(
+                    width: 40.0,
+                  ),
+
+                  Icon(Icons.arrow_forward , )
+
+                ],
+              ),
+
+            ),
+
+
+
+
+            const SizedBox(
+              height: 10,
+            ),
+
+
           ],
         ),
       ),
