@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:techfest/events_button_page/inner_sign.dart';
 
-class signThePledge extends StatelessWidget {
-  const signThePledge({Key? key}) : super(key: key);
+class SignThePledge extends StatelessWidget {
+  const SignThePledge({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class signThePledge extends StatelessWidget {
                 const SizedBox(width: 150,),
                 InkWell(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => signInner()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const signInner()));
 
                     },child: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),
 

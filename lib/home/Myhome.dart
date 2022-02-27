@@ -168,7 +168,7 @@ class _MyHomeState extends State<MyHome> {
               height: 5.0,
               color: Colors.black,
             ),
-            const signThePledge(),
+            const SignThePledge(),
             Container(
               margin: const EdgeInsets.only(left: 20),
               child: Row(
