@@ -115,6 +115,7 @@ class _MyHomeState extends State<MyHome> {
               ),
             ),
             CarouselSlider(
+
                 items: _imsource
                     .map((item) => Container(
                           child: Center(
@@ -127,10 +128,14 @@ class _MyHomeState extends State<MyHome> {
                           ),
                         ))
                     .toList(),
+
                 options: CarouselOptions(
                   autoPlay: true,
                   aspectRatio: 2.0,
+                  scrollDirection: Axis.vertical,
                   enlargeCenterPage: true,
+                  enlargeStrategy: CenterPageEnlargeStrategy.height,
+
                 )),
             Container(
 

@@ -20,20 +20,19 @@ class EventButtonPage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-
-            EventButton(title: 'Lectures',img: 'images/ev11.png',colour: Colors.purple.withOpacity(0.3),func: () {
+            EventButton(title: 'Lectures',img: 'images/ev11.png',colour: Colors.transparent,func: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => lecturesPage()));
             },),
-            EventButton(title: 'Competitions',img: 'images/eve22.png',colour: Colors.blue.withOpacity(0.3),func: () {
+            EventButton(title: 'Competitions',img: 'images/eve22.png',colour: Colors.transparent,func: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => compitionsPage()));
             },),
-            EventButton(title: 'Workshops',img: 'images/eve333.png',colour: Colors.pink.withOpacity(0.3),func: () {
+            EventButton(title: 'Workshops',img: 'images/eve333.png',colour: Colors.transparent,func: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => workShopPage()));
             },),
-            EventButton(title: 'Exhibitions',img: 'images/eve44.png',colour: Colors.deepOrangeAccent.withOpacity(0.3),func: () {
+            EventButton(title: 'Exhibitions',img: 'images/eve44.png',colour: Colors.transparent,func: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => exhibitionPage()));
             },),
@@ -42,29 +41,32 @@ class EventButtonPage extends StatelessWidget {
 
           ],
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const SizedBox(
-              width: 20.0,
-            ),
-            EventButton(title: 'Initiatives',img: 'images/eve55.png',colour: Colors.green.withOpacity(0.3),func: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => intiativePage()));
-            },),
+        Padding(
+          padding: const EdgeInsets.only(left: 100,right: 50),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(
+                width: 20.0,
+              ),
+              EventButton(title: 'Initiatives',img: 'images/eve55.png',colour: Colors.transparent,func: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => intiativePage()));
+              },),
 
-            const SizedBox(
-              width: 20.0,
-            ),
-            EventButton(title: 'Technoholix',img: 'images/eve66.png',colour: Colors.orangeAccent.withOpacity(0.3),func: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => TechnoHolixPage()));
-            },),
+              const SizedBox(
+                width: 20.0,
+              ),
+              EventButton(title: 'Technoholix',img: 'images/eve66.png',colour: Colors.transparent,func: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TechnoHolixPage()));
+              },),
 
 
 
 
-          ],
+            ],
+          ),
         ),
 
       ],
