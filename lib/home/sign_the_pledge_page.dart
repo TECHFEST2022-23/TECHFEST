@@ -32,9 +32,10 @@ class SignThePledge extends StatelessWidget {
             margin: const EdgeInsets.only(top: 20),
             child: Row(
               children:  [
-                const SizedBox(height: 10,width: 15,),
-                const Icon(Icons.auto_graph,color: Colors.white,),
-                const SizedBox(width: 15,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: const Icon(Icons.auto_graph,color: Colors.white,),
+                ),
                 const Text('Sign the pledge' , style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -44,9 +45,7 @@ class SignThePledge extends StatelessWidget {
                 InkWell(
                     onTap: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context) => const signInner()));
-
                     },child: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),
-
               ],
             ),
           ),

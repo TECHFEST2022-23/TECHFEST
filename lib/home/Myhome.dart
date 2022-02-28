@@ -139,9 +139,7 @@ class _MyHomeState extends State<MyHome> {
                 color : Colors.blueGrey,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-
               ),),
-
             ),
             const EventButtonPage(),
             const  Merchandies(),
@@ -150,15 +148,12 @@ class _MyHomeState extends State<MyHome> {
               color: Colors.black,
             ),
             Container(
-
               padding: const EdgeInsets.only(top: 15.0,left: 20.0),
               child: const Text("Check out our social media handles ",style: TextStyle(
                 color : Colors.blueGrey,
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-
               ),),
-
             ),
             const SocialPage(),
             const SizedBox(
@@ -172,7 +167,6 @@ class _MyHomeState extends State<MyHome> {
             Container(
               margin: const EdgeInsets.only(left: 20),
               child: Row(
-
                 children: const [
                   Text('A tour to our virtual twenty fifth edition',style: TextStyle(
                     color: Colors.blueGrey,
@@ -180,25 +174,16 @@ class _MyHomeState extends State<MyHome> {
                     fontSize: 16.0,
                     fontWeight: FontWeight.bold,
                   ),),
-                  SizedBox(
-                    width: 40.0,
-                  ),
-
-                  Icon(Icons.arrow_forward , )
-
+                  Padding(
+                    padding: EdgeInsets.only(left: 8.0),
+                    child: Icon(Icons.arrow_forward , ),
+                  )
                 ],
               ),
-
             ),
-
-
-
-
             const SizedBox(
               height: 10,
             ),
-
-
           ],
         ),
       ),

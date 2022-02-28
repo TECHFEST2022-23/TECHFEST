@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:techfest/home/Myhome.dart';
 
 class Mydrawer extends StatefulWidget {
   const Mydrawer({Key? key}) : super(key: key);
@@ -21,11 +22,14 @@ class _MydrawerState extends State<Mydrawer> {
       DrawerHeader(
         padding: EdgeInsets.zero,
           child: UserAccountsDrawerHeader(
-        accountName: Text("shubham",style: TextStyle(color: Colors.white,fontSize: 20),),
-        accountEmail: Text("shubham@gmail.com",style: TextStyle(color: Colors.white,fontSize: 15),),
+        accountName: Text("Techfest",style: TextStyle(color: Colors.white,fontSize: 20),),
+        accountEmail: Text("Techfest@gmail.com",style: TextStyle(color: Colors.white,fontSize: 15),),
       )),
 
           ListTile(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=> MyHome()));
+            },
             leading: Icon(CupertinoIcons.home,color: Colors.white,),
            title: Text("home",style: TextStyle(color: Colors.white,fontSize: 20),),
           ),

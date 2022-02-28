@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techfest/events_button_page/inner_merchindies.dart';
+
 class Merchandies extends StatelessWidget {
   const Merchandies({
     Key? key,
@@ -11,18 +12,14 @@ class Merchandies extends StatelessWidget {
       width: double.infinity,
       // height: 300,
       margin: const EdgeInsets.all(15.0),
-
       decoration:   BoxDecoration(
           borderRadius: BorderRadius.circular(9.0),
           gradient: const LinearGradient(
               begin: Alignment.centerLeft,
               end: Alignment.centerRight,
-
               colors: <Color>[
                 Color(0xFF274569),
                 Color(0xFF020518),
-
-
               ]
           )
       ),
@@ -33,10 +30,12 @@ class Merchandies extends StatelessWidget {
             margin: const EdgeInsets.only(top: 20),
             child: Row(
               children:  [
-                const SizedBox(height: 10,width: 15,),
-                const Icon(Icons.add_shopping_cart_outlined,color: Colors.white,),
+                Padding(
+                  padding: const EdgeInsets.only(left: 8.0),
+                  child: const Icon(Icons.add_shopping_cart_outlined,color: Colors.white,),
+                ),
                 const SizedBox(width: 15,),
-                const Text('Buy your own Techfest Merchandise ' , style: TextStyle(
+                const Text('Buy your own Techfest Merchandise', style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
                     fontSize: 15.0
@@ -77,13 +76,9 @@ class Merchandies extends StatelessWidget {
                   )),
                 ],
               )
-
           ),
-
-
           const SizedBox(
             height: 15.0,
-
           ),
         ],
       ),

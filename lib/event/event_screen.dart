@@ -4,6 +4,10 @@ import 'package:techfest/home/Mydrawer.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:techfest/home/Myhome.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+
+const _url = "https://pages.razorpay.com/pl_J16Y0QcVAaSbPL/view";
 
 class Event extends StatefulWidget {
   const Event({Key? key}) : super(key: key);
@@ -96,9 +100,7 @@ class _EventState extends State<Event> {
                          "images/001.jpg",
                        ),
                        child: InkWell(
-                         onTap: (){
-                           print("Image Press");
-                         },
+                         onTap: _payment,
                        ),
                        colorFilter: ColorFilter.mode(Colors.black54, BlendMode.colorBurn),
                        height: 172,
@@ -221,4 +223,8 @@ class _EventState extends State<Event> {
       ),
     );
   }
+}
+
+void _payment() async {
+  if(!await launch(_url)) throw 'Could not found $_url';
 }
