@@ -45,7 +45,6 @@ class Merchandies extends StatelessWidget {
                     onTap: (){
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => merchindiesPage()));
-
                     },child: const Icon(Icons.arrow_forward_ios,color: Colors.white,)),
 
               ],
@@ -54,7 +53,6 @@ class Merchandies extends StatelessWidget {
           Image.asset('images/merc1.png' ,),
           const SizedBox(
             height: 15.0,
-
           ),
           Container(
               margin: const EdgeInsets.only(left: 10.0,right: 10.0),

@@ -33,7 +33,6 @@ class EventButton extends StatelessWidget {
             child: Image.asset(img ,height: 70,width: 70,),
           ),
           Center(child:  Text(title)),
-
         ],
       ),
     );
