@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:techfest/about/about_screen.dart';
 import 'package:techfest/home/Mydrawer.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+// import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
+// import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:techfest/home/Myhome.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 
+import '../prodile/profile_screen.dart';
 
 const _url = "https://pages.razorpay.com/pl_J16Y0QcVAaSbPL/view";
 
@@ -17,7 +19,35 @@ class Event extends StatefulWidget {
 }
 
 class _EventState extends State<Event> {
-  var _currentIndex = 1;
+  var selectedIndex = 1;
+  late PageController _pageController;
+
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController = PageController(initialPage: selectedIndex);
+  }
+
+  void onButtonPressed(int index) {
+    setState(() {
+      selectedIndex = index;
+
+      if(selectedIndex == 0){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => MyHome()));
+      }else if(selectedIndex == 1){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Event()));
+      }else if(selectedIndex == 2){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => About()));
+      }else if(selectedIndex == 3){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
+      }
+
+      // Navigator.push(context, MaterialPageRoute(builder: (context) => ));
+    });
+    _pageController.animateToPage(selectedIndex,
+        duration: const Duration(milliseconds: 400), curve: Curves.easeOutQuad);
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,56 +61,39 @@ class _EventState extends State<Event> {
         ),
       ),
       drawer: Mydrawer(),
-      bottomNavigationBar: SalomonBottomBar(
-        currentIndex: _currentIndex,
-        onTap: (i) {
-          setState(() {
-            _currentIndex = i;
-            // print(_currentIndex);
-            switch (_currentIndex) {
-              case 0:
-                {
-                  // print(_currentIndex);
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MyHome()));
-                }
-                break;
+      bottomNavigationBar: SlidingClippedNavBar(
+        backgroundColor: Colors.white,
+        onButtonPressed: onButtonPressed,
+        iconSize: 30,
+        activeColor:  Colors.green,
+        inactiveColor: Colors.red,
+        selectedIndex: selectedIndex,
+        barItems: [
 
-              case 2:
-                {
-                  print(_currentIndex);
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> About()));
-                }
-                break;
+          BarItem(
+            icon: Icons.home,
+            title: 'Home',
+            // activeColor: Colors.blue,
+            // inactiveColor: Colors.orange,
+          ),
+          BarItem(
+            icon: Icons.event,
 
-              case 3:
-                {
-                  print(_currentIndex);
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=> MyHome()));
-                }
-                break;
-            }
-          });
-        },
-        items: [
-          SalomonBottomBarItem(
-            icon: Icon(Icons.home),
-            title: Text("Home"),
-            selectedColor: Colors.purple,
+            title: 'Events',
+            // activeColor: Colors.yellow,
+            // inactiveColor: Colors.green,
           ),
-          SalomonBottomBarItem(
-            icon: Icon(MdiIcons.calendar),
-            title: Text("Events"),
-            selectedColor: Colors.pink,
+          BarItem(
+            icon: Icons.info,
+            title: 'About',
+            // activeColor: Colors.blue,
+            // inactiveColor: Colors.red,
           ),
-          SalomonBottomBarItem(
-            icon: Icon(MdiIcons.chatAlert),
-            title: Text("About"),
-            selectedColor: Colors.orange,
-          ),
-          SalomonBottomBarItem(
-            icon: Icon(Icons.person),
-            title: Text("Profile"),
-            selectedColor: Colors.teal,
+          BarItem(
+            icon: Icons.person_rounded,
+            title: 'Profile',
+            // activeColor: Colors.cyan,
+            // inactiveColor: Colors.white,
           ),
         ],
       ),
