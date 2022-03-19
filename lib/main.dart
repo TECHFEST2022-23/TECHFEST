@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home/Myhome.dart';
+import 'package:techfest/Myhome.dart';
 
 void main() {
   runApp(const MyApp());

@@ -33,8 +33,6 @@ class EventButtonPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => exhibitionPage()));
             },),
 
-
-
           ],
         ),
         Padding(
@@ -57,9 +55,6 @@ class EventButtonPage extends StatelessWidget {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => TechnoHolixPage()));
               },),
-
-
-
 
             ],
           ),

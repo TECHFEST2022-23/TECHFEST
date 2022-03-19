@@ -17,7 +17,8 @@ class signInner extends StatelessWidget {
                 decoration: TextDecoration.none,
                 color: Colors.black,
                 fontSize: 15.0
-            ),)
+            ),
+            )
           ],
         ),
       ),
