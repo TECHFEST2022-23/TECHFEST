@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:techfest/Myhome.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
