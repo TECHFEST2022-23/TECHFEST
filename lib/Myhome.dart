@@ -1,13 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:sliding_clipped_nav_bar/sliding_clipped_nav_bar.dart';
 import 'package:techfest/about/about_screen.dart';
 import 'package:techfest/event/event_screen.dart';
 import 'package:techfest/home/Mydrawer.dart';
 import 'package:techfest/home/home_page.dart';
 import 'package:techfest/profile/profile_screen.dart';
-import 'package:decorated_icon/decorated_icon.dart';
 
 class MyHome extends StatefulWidget {
   const MyHome({Key? key}) : super(key: key);
