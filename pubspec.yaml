@@ -42,10 +42,13 @@ dependencies:
   sliding_clipped_nav_bar: ^3.0.0+1
   decorated_icon: ^1.2.1
   flutter_native_splash: ^2.1.1
+  flutter_slimy_card: ^1.0.2
+  glassmorphism: ^3.0.0
 
 flutter_native_splash:
   color: "#ffffff"
   image: images/splash.png
+  android_gravity: center
 
 dev_dependencies:
   flutter_test:

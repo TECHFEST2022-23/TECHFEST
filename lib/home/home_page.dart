@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
             const Padding(
               padding: EdgeInsets.all(20),
               child: Text(
-                "tech events",
+                "Tech events",
                 style: TextStyle(
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
@@ -37,26 +37,29 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            CarouselSlider(
-                items: _imsource
-                    .map((item) => Container(
-                  child: Center(
-                    child: Image.network(
-                      item,
-                      fit: BoxFit.cover,
-                      width: 800,
-                      height: 1200,
+            Container(
+              padding: EdgeInsets.only(left: 10, right: 10),
+              child: CarouselSlider(
+                  items: _imsource
+                      .map((item) => Container(
+                    child: Center(
+                      child: Image.network(
+                        item,
+                        fit: BoxFit.cover,
+                        width: 500,
+                        height: 1200,
+                      ),
                     ),
-                  ),
-                ))
-                    .toList(),
-                options: CarouselOptions(
-                  autoPlay: true,
-                  aspectRatio: 2.0,
-                  scrollDirection: Axis.vertical,
-                  enlargeCenterPage: true,
-                  enlargeStrategy: CenterPageEnlargeStrategy.height,
-                )),
+                  ))
+                      .toList(),
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    aspectRatio: 2.0,
+                    scrollDirection: Axis.vertical,
+                    enlargeCenterPage: true,
+                    enlargeStrategy: CenterPageEnlargeStrategy.height,
+                  )),
+            ),
             Container(
               padding: const EdgeInsets.only(top: 15.0, left: 20.0),
               child: const Text(

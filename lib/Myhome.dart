@@ -43,7 +43,7 @@ class _MyHomeState extends State<MyHome> {
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
-          "Tech fest",
+          "Tech Fest",
           style: TextStyle(
             fontSize: 20,
           ),
@@ -52,10 +52,9 @@ class _MyHomeState extends State<MyHome> {
       drawer: Mydrawer(),
       body: page[currentIndex],
       bottomNavigationBar: Container(
-        margin: EdgeInsets.all(09),
         height: size.width * .135,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: Colors.blueGrey,
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(.15),
@@ -63,7 +62,6 @@ class _MyHomeState extends State<MyHome> {
               offset: Offset(5, 5),
             ),
           ],
-          borderRadius: BorderRadius.circular(50),
         ),
         child: ListView.builder(
           itemCount: 4,
@@ -93,9 +91,9 @@ class _MyHomeState extends State<MyHome> {
                   width: size.width * .128,
                   height: index == currentIndex ? size.width * .014 : 0,
                   decoration: BoxDecoration(
-                    color: Colors.blueAccent,
+                    color: Colors.white,
                     borderRadius: BorderRadius.vertical(
-                      bottom: Radius.circular(10),
+                      bottom: Radius.circular(30),
                     ),
                   ),
                 ),
@@ -103,7 +101,7 @@ class _MyHomeState extends State<MyHome> {
                   listOfIcons[index],
                   size: size.width * .06,
                   color: index == currentIndex
-                      ? Colors.blueAccent
+                      ? Colors.white
                       : Colors.black38,
                 ),
                 SizedBox(height: size.width * .03),
